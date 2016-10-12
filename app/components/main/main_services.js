@@ -141,16 +141,18 @@ angular.module("app")
 			}
 		};
 
-		var _getData = function(id,a){
-			if(!angular.isString(id) || !angular.isArray(a)) {
+		var _getData = function(prop, param, arr){
+			if( !angular.isString(prop) || 
+				!angular.isString(param) || 
+				!angular.isArray(arr) ){
 				console.error("Utilities service -> 'getData' function: got invalid arguments");
 			}
 			
 			var data;
 			
-			for(var i = 0, l = a.length; i<l; i++){
-				if(a[i].id === id){
-					data = a[i];
+			for(var i = 0, l = arr.length; i<l; i++){
+				if(arr[i][prop] === param){
+					data = arr[i];
 					break;
 				}
 			}

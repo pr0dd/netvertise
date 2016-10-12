@@ -18,7 +18,7 @@ angular.module("app")
 		      }
 		    })
 		    .state('main.company', {
-		      url: "company/{name}",
+		      url: "company/:name",
 		      templateUrl: "app/components/company_detail/company_detail.html",	      
 		      controller: "CompanyDetailCtrl"
 		    })

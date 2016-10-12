@@ -1,3 +1,7 @@
 <ul class="list-group">
-	<li class="list-group-item" ng-repeat="item in data">{{item.cName}}</li>
+	<li class="list-group-item" ui-sref-active="active" ng-repeat="item in data | orderBy:'name'">
+		<a ui-sref="main.company({name:item.name})">
+			{{item.cName}}	
+		</a>
+	</li>
 </ul>

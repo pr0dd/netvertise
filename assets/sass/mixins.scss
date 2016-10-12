@@ -1,11 +1,11 @@
 // Custom mixins:
 
 // Absolute position:
-@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+@mixin abs-pos ($top: auto, $left: auto, $bottom: auto, $right: auto) {
   top: $top;
-  right: $right;
-  bottom: $bottom;
   left: $left;
+  bottom: $bottom;
+  right: $right;
   position: absolute;
 }
 

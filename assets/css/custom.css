@@ -516,3 +516,21 @@ body {
   @media only screen and (min-width: 1500px) {
     body .container {
       width: 1370px; } }
+
+.company-list ul li {
+  cursor: pointer;
+  position: relative;
+  min-height: 44px; }
+  .company-list ul li a {
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: auto;
+    position: absolute;
+    padding: 10px 15px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none; }
+  .company-list ul li.active a {
+    color: #fff; }
