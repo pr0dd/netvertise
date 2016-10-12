@@ -1,1 +1,8 @@
-<button class="btn btn-lg btn-primary" type="button">UPDATE</button>
+<label for="upload-delta">
+    <span class="btn btn-lg btn-warning">UPDATE</span>
+    <input type="file" id="upload-delta" style="display:none" upload-changes>
+</label>
+<span ng-class="{blink: selectedFile}" 
+	  ng-show="selectedFile">
+	  Data is being updated using <b>{{selectedFile}}</b>... please wait. 
+</span>

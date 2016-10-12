@@ -21,5 +21,11 @@ angular.module("app")
 		$scope.getData = Utilities.getData;
 		// Get data:
 		$scope.data = CompanyData;
+		
+		//Decoration...
+
+		// Selected file placeholder:
+		$scope.selectedFile = null;
+
 
 	}]);
