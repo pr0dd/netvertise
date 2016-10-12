@@ -1,0 +1,24 @@
+<div class="main-component">
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<ng-include src="'app/components/company_list/company_list.html'"></ng-include>
+					</div>
+					<div class="col-sm-8">
+						<h2 ng-hide="checkRoute('main.company')">
+							Select a company to view the details...
+						</h2>
+						<ui-view></ui-view>
+					</div>
+					<div class="col-xs-12">
+						<ng-include src="'app/components/company_update/company_update.html'"></ng-include>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
