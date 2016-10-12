@@ -14,7 +14,94 @@ angular.module("app")
 
 		var companyData = [
 			{
-				test: "asdf"
+				id: 1,
+				name: "GOOG",
+				cName: "Google Inc",
+				price: 658.89,
+				changeValue: "-2.01",
+				changePercent: "-0.30%",
+				marketCap: "460.74B" 
+			},
+			{
+				id: 2,
+				name: "BIDU",
+				cName: "Baidu Inc (ADR)",
+				price: 160.19,
+				changeValue: "-2.70",
+				changePercent: "-1.66%",
+				marketCap: "56.49B" 
+			},
+			{
+				id: 3,
+				name: "YNDX",
+				cName: "Yandex NV",
+				price: 11.80,
+				changeValue: "-0.11",
+				changePercent: "-0.92%",
+				marketCap: "3.75B" 
+			},
+			{
+				id: 4,
+				name: "BCOR",
+				cName: "Blucora Inc",
+				price: 13.43,
+				changeValue: "-0.12",
+				changePercent: "-0.89%",
+				marketCap: "557.51B" 
+			},
+			{
+				id: 5,
+				name: "YHOO",
+				cName: "Yahoo! Inc",
+				price: 34.79,
+				changeValue: "-0.40",
+				changePercent: "-1.14%",
+				marketCap: "32.76B" 
+			},
+			{
+				id: 6,
+				name: "MSFT",
+				cName: "Microsoft Corp",
+				price: 46.17,
+				changeValue: "-0.44",
+				changePercent: "-0.93%",
+				marketCap: "369.67B" 
+			},
+			{
+				id: 7,
+				name: "IACI",
+				cName: "IAC/InterActiveCorp",
+				price: 73.17,
+				changeValue: "-0.44",
+				changePercent: "-0.60%",
+				marketCap: "6.09B" 
+			},
+			{
+				id: 8,
+				name: "FB",
+				cName: "Facebook Inc",
+				price: 94.20,
+				changeValue: "-1.11",
+				changePercent: "-1.16%",
+				marketCap: "264.27B" 
+			},
+			{
+				id: 9,
+				name: "AAPL",
+				cName: "Apple Inc.",
+				price: 113.76,
+				changeValue: "-1.25",
+				changePercent: "-1.09%",
+				marketCap: "649.88B" 
+			},
+			{
+				id: 10,
+				name: "TWTR",
+				cName: "Twitter Inc",
+				price: 27.19,
+				changeValue: "-0.42",
+				changePercent: "-1.52%",
+				marketCap: "18.35B" 
 			}
 		];
 
