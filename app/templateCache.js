@@ -7,7 +7,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('app/components/company_list/company_list.html',
-    "<ul> <li>One</li> <li>Two</li> <li>Three</li> <li>Four</li> </ul>"
+    "<ul class=\"list-group\"> <li class=\"list-group-item\" ng-repeat=\"item in data\">{{item.cName}}</li> </ul>"
   );
 
 
