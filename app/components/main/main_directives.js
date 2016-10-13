@@ -16,7 +16,7 @@ angular.module("app")
             // The actual updater:
             var updateRecords = function(chunk, data, count, limit){
                 chunk = chunk.map(function(item){
-                    return item.split(",");
+                    return item.split(/\s*,\s*/);
                 });
                 angular.forEach(data, function(item,i){
                     var row = chunk[i];

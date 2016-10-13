@@ -13,5 +13,5 @@ angular.module("app")
 
 		$scope.company = $scope.getData("name", $stateParams.name, $scope.data);
 		
-
+		console.log($scope.company.marketCap===" ");
 	}]);

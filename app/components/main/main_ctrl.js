@@ -15,7 +15,6 @@ angular.module("app")
 
 		"use strict";
 
-		// $localStorage.$reset();
 		// Define utility functions:
 		$scope.checkRoute = Utilities.checkRoute;
 		$scope.getData = Utilities.getData;

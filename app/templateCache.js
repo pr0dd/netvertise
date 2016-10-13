@@ -2,7 +2,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('app/components/company_detail/company_detail.html',
-    "<h2><small>Company name: </small>{{company.cName}}</h2> <h2><small>Price: </small>{{company.price}}</h2> <h2><small>Change, $: </small>{{company.changeValue}}</h2> <h2><small>Chnge, %: </small>{{company.changePercent}}</h2> <h2><small>Market capitalization: </small>{{company.marketCap}}</h2>"
+    "<h2><small>Company name: </small>{{company.cName}}</h2> <h2><small>Price: </small>{{company.price}}</h2> <h2><small>Change, $: </small>{{company.changeValue}}</h2> <h2><small>Chnge, %: </small>{{company.changePercent}}</h2> <h2 ng-show=\"company.marketCap !==''\"> <small>Market capitalization: </small>{{company.marketCap}} </h2>"
   );
 
 
