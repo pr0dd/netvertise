@@ -1,3 +1,54 @@
+/*BLINKING*/
+@-webkit-keyframes blinks {
+  0% {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  50% {
+    opacity: 0.1;
+    filter: alpha(opacity=10); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+@-moz-keyframes blinks {
+  0% {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  50% {
+    opacity: 0.1;
+    filter: alpha(opacity=10); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+@-ms-keyframes blinks {
+  0% {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  50% {
+    opacity: 0.1;
+    filter: alpha(opacity=10); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+@-o-keyframes blinks {
+  0% {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  50% {
+    opacity: 0.1;
+    filter: alpha(opacity=10); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+@keyframes blinks {
+  0% {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  50% {
+    opacity: 0.1;
+    filter: alpha(opacity=10); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
 /*TOP MENU BTN'S ICON ANIMATION*/
 @-webkit-keyframes icon-in {
   from {
@@ -534,3 +585,10 @@ body {
     text-decoration: none; }
   .company-list ul li.active a {
     color: #fff; }
+
+.blink {
+  -webkit-animation: blinks 1.5s ease-in infinite;
+  -moz-animation: blinks 1.5s ease-in infinite;
+  -ms-animation: blinks 1.5s ease-in infinite;
+  -o-animation: blinks 1.5s ease-in infinite;
+  animation: blinks 1.5s ease-in infinite; }

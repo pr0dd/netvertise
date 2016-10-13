@@ -22,10 +22,8 @@ angular.module("app")
 		// Get data:
 		$scope.data = CompanyData;
 		
-		//Decoration...
-
-		// Selected file placeholder:
-		$scope.selectedFile = null;
-
+		//Notifications...
+		$scope.selectedFile = false;
+		$scope.done = false;
 
 	}]);

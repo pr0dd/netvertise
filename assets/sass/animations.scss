@@ -1,3 +1,16 @@
+/*BLINKING*/ 
+@include keyframes(blinks) {
+    0% {
+        @include opacity(1);
+    }
+    50% {
+        @include opacity(.1);
+    }
+    100% {
+        @include opacity(1);
+    }
+}
+
 
 /*TOP MENU BTN'S ICON ANIMATION*/
 @include keyframes(icon-in) {

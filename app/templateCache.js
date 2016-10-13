@@ -12,7 +12,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('app/components/company_update/company_update.html',
-    "<label for=\"upload-delta\"> <span class=\"btn btn-lg btn-warning\">UPDATE</span> <input type=\"file\" id=\"upload-delta\" style=\"display:none\" upload-changes> </label> <span ng-class=\"{blink: selectedFile}\" ng-show=\"selectedFile\"> Data is being updated using <b>{{selectedFile}}</b>... please wait. </span>"
+    "<label for=\"upload-delta\"> <span class=\"btn btn-lg btn-warning\">UPDATE</span> <input type=\"file\" id=\"upload-delta\" style=\"display:none\" upload-changes> </label> <span ng-class=\"{blink: selectedFile}\" ng-show=\"selectedFile\"> Data is being updated using <b>{{selectedFile}}</b>... please wait. </span> <span ng-show=\"done\" class=\"text-success\"> <b>Data was successfully updated!</b> </span>"
   );
 
 

@@ -53,3 +53,7 @@ body {
 	}
 }
 
+.blink {
+	@include animation(blinks 1.5s ease-in infinite);
+}
+
