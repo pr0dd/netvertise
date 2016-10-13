@@ -63,7 +63,7 @@ angular.module("app")
             
                 // Read file and trigger FileReader's 'load' event:
                 reader.readAsText(file);
-            }
+            };
 
             $element.on("change", function(){
                 $scope.selectedFile = this.files[0].name;

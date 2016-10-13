@@ -21,5 +21,5 @@ angular.module("app")
 		      url: "company/:name",
 		      templateUrl: "app/components/company_detail/company_detail.html",	      
 		      controller: "CompanyDetailCtrl"
-		    })
+		    });
 	}]);
