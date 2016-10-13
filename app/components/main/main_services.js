@@ -15,6 +15,7 @@ angular.module("app")
 		var companyData = [
 			{
 				id: 1,
+				icon: "fa-google",
 				name: "GOOG",
 				cName: "Google Inc",
 				price: 658.89,
@@ -24,6 +25,7 @@ angular.module("app")
 			},
 			{
 				id: 2,
+				icon: "fa-paw",
 				name: "BIDU",
 				cName: "Baidu Inc (ADR)",
 				price: 160.19,
@@ -33,6 +35,7 @@ angular.module("app")
 			},
 			{
 				id: 3,
+				icon: "fa-yoast",
 				name: "YNDX",
 				cName: "Yandex NV",
 				price: 11.80,
@@ -42,6 +45,7 @@ angular.module("app")
 			},
 			{
 				id: 4,
+				icon: "fa-globe",
 				name: "BCOR",
 				cName: "Blucora Inc",
 				price: 13.43,
@@ -51,6 +55,7 @@ angular.module("app")
 			},
 			{
 				id: 5,
+				icon: "fa-yahoo",
 				name: "YHOO",
 				cName: "Yahoo! Inc",
 				price: 34.79,
@@ -60,6 +65,7 @@ angular.module("app")
 			},
 			{
 				id: 6,
+				icon: "fa-windows",
 				name: "MSFT",
 				cName: "Microsoft Corp",
 				price: 46.17,
@@ -69,6 +75,7 @@ angular.module("app")
 			},
 			{
 				id: 7,
+				icon: "fa-share-alt",
 				name: "IACI",
 				cName: "IAC/InterActiveCorp",
 				price: 73.17,
@@ -78,6 +85,7 @@ angular.module("app")
 			},
 			{
 				id: 8,
+				icon: "fa-facebook-official",
 				name: "FB",
 				cName: "Facebook Inc",
 				price: 94.20,
@@ -87,6 +95,7 @@ angular.module("app")
 			},
 			{
 				id: 9,
+				icon: "fa-apple",
 				name: "AAPL",
 				cName: "Apple Inc.",
 				price: 113.76,
@@ -96,6 +105,7 @@ angular.module("app")
 			},
 			{
 				id: 10,
+				icon: "fa-twitter",
 				name: "TWTR",
 				cName: "Twitter Inc",
 				price: 27.19,

@@ -4,17 +4,33 @@
 		<div class="row">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-4 company-list">
-						<ng-include src="'app/components/company_list/company_list.html'"></ng-include>
-					</div>
-					<div class="col-sm-8 company-details">
-						<h2 ng-hide="checkRoute('main.company')">
-							Select a company to view the details...
-						</h2>
-						<ui-view></ui-view>
-					</div>
-					<div class="col-xs-12">
-						<ng-include src="'app/components/company_update/company_update.html'"></ng-include>
+					<div class="content-wrapper">
+						<!-- TITLE -->
+						<div class="row">
+							<div class="col-xs-12 app-title">
+								<h2>Company Data List</h2>
+							</div>
+						</div>
+						<!-- CONTENT -->
+						<div class="row">
+							<div class="col-sm-4 company-list">
+								<ng-include src="'app/components/company_list/company_list.html'"></ng-include>
+							</div>
+							<div class="col-sm-8 company-details">
+								<div ng-hide="checkRoute('main.company')">
+									<h2>
+										Select a company to view the details...
+									</h2>
+								</div>
+								<ui-view></ui-view>
+							</div>
+						</div>
+						<!-- UPDATE -->
+						<div class="row">
+							<div class="col-xs-12 company-update">
+								<ng-include src="'app/components/company_update/company_update.html'"></ng-include>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

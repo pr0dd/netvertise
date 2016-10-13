@@ -16,7 +16,7 @@ html, body {
 body {
 	min-width:300px;
 	font-family:Verdana,sans-serif;
-	background: $milk;
+	@include gradient-directional($body_col_1, $body_col_2, 155deg);
 	color:$black;
 	font-weight: 400;
 	font-size: 16px;
@@ -30,30 +30,173 @@ body {
 	}
 }
 
-.company-list {
-	ul {
-		li {
-			cursor: pointer;
-			position: relative;
-			min-height: 44px;
-			a {
-				@include abs-pos(0, 0);
-				padding: 10px 15px;
-				width: 100%;
-				height: 100%;
-				display: block;
-				text-decoration: none;
+.content-wrapper {
+	@extend %clearfix;
+	width: 95%;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 10px;
+	border: 0px solid transparent;
+	@include gradient-directional($wrap_col_1, $wrap_col_2, 155deg);
+	@include border-radius(20px);
+	@include box-shadow;
+	@include bp-medium {
+		width:100%;
+		// padding-top: 50px;
+		margin-top: 25px;
+	}
+	.app-title {
+		padding: 5px;
+		text-align: center;
+		@include bp-medium {
+			padding: 15px;
+		}
+		h2 {
+			font-size: 20px;
+			color:$black;
+			margin:0;
+			text-transform: uppercase;
+			text-shadow: 1px 0 0 rgba(255,255,255,0.5);
+			@include bp-medium {
+				font-size: 30px;
 			}
-			&.active {
+		}
+	}
+	.company-list {
+		padding: 10px;
+		text-align: center;
+		@include gradient-directional($list_col_1, $list_col_2, 155deg);
+		@include bp-medium {
+			padding: 25px;
+			padding-right:15px;
+			min-height: 501px;
+		}
+		.menu-btn {
+			color: $mtcolor;
+			border: 1px solid $mtcolor;
+			margin-bottom: 10px;
+			@include bp-medium {
+				display: none;
+			}
+			i {
+				text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+			}
+		}
+		ul {
+			@include bp-medium {
+				margin-left:-15px;
+				margin-right:-15px;
+			}
+			&.list-large {
+				display: none;
+				@include bp-medium {
+					display: block;
+				}
+			}
+			&.list-small {
+				@include bp-medium {
+					display: none;
+				}
+			}
+			li {
+				text-align: left;
+				background:transparent;
+				border:none;
+				border-bottom: 1px solid $list_border_col;
+				cursor: pointer;
+				position: relative;
+				min-height: 44px;
+				text-transform: uppercase;
 				a {
-					color: $mtcolor;
+					color: $list_text_col;
+					@include abs-pos(0, 0);
+					padding: 10px 15px;
+					padding-left: 25px;
+					width: 100%;
+					height: 100%;
+					display: block;
+					text-decoration: none;
+					i {
+						margin-right: 10px;
+						color:$list_active_bar;
+					}
+					i.fa-chevron-right {
+						color:$list_text_col;
+						margin-right:0;
+						float:right;
+					}
+				}
+				&.active-link {
+					background-color: $list_active_col;
+					a {
+						&:after {
+							content: "";
+							display: block;
+							@include abs-pos(0,4px);
+							width: 3px;
+							height: 44px;
+							background: $list_active_bar;
+						}
+					}
 				}
 			}
 		}
 	}
-}
-
-.blink {
-	@include animation(blinks 1.5s ease-in infinite);
+	.company-details {
+		div {
+			padding: 15px;
+			@include bp-medium {
+				min-height: 501px;
+			}
+			&>h2 {
+				font-size: 23px;
+				color:$mtcolor;
+				margin: 0;
+				padding: 10px;
+				text-transform: uppercase;
+				text-shadow: 1px 0 0 $black;
+				small {
+					color:#e4bfe0;
+				}
+			}
+		}
+		@include gradient-directional($detail_col_1, $detail_col_2, 155deg);
+	}
+	.company-update {
+		padding: 5px;
+		text-align: center;
+		@include bp-medium {
+			padding: 15px;
+		}
+		label {
+			padding: 0 8px;
+			outline: none;
+			cursor: pointer;
+			border: 2px solid $mtcolor;
+			@include border-radius;
+			span {
+				font-size: 25px;
+				i {
+					color: $mtcolor;
+					text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+				}
+			}
+		}
+		.results {
+			min-height: 25px;
+			span {
+				color: $mtcolor;
+				padding: 2px 5px;
+				background:$status_msg_col;
+				border: 0px solid transparent;
+				@include border-radius(3px);
+				font-size: 12px;
+				&.blink {
+					@include animation(blinks 1.5s ease-in infinite);
+				}
+			}
+		}
+	}
+	
 }
 

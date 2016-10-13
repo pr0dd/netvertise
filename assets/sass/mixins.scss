@@ -93,6 +93,16 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
 }
 
+// Directional gradient:
+@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
+  background-color: $start-color;
+  background-image: -webkit-linear-gradient($deg, $start-color 0%, $end-color 100%); 
+  background-image: -o-linear-gradient($deg, $start-color 0%, $end-color 100%); 
+  background-image: linear-gradient($deg, $start-color 0%, $end-color 100%);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1);
+}
+
 // Background Gradient - Left to Right:
 @mixin bg-gradient-l2r($start-colour, $end-colour) {
     background-color: $start-colour;
