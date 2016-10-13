@@ -15,7 +15,6 @@ angular.module("app")
 
 		"use strict";
 
-		$localStorage.$reset();
 		// Define utility functions:
 		$scope.checkRoute = Utilities.checkRoute;
 		$scope.getData = Utilities.getData;
@@ -25,7 +24,7 @@ angular.module("app")
 		// Notifications...
 		$scope.selectedFile = false;
 		$scope.done = false;
-		// Is collapsed list of comp-s on small screens:
+		// Control over list's state on small screens:
 		$scope.listSm = true;
 
 	}]);
