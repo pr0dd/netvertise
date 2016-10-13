@@ -4,7 +4,7 @@ angular.module("app")
 
 		return function($scope, $element, $attrs){
 
-            //Divide an array into smaller arrays of given length:
+            // Divide an array into smaller arrays of given length:
             var divide = function(array, separator){
               var len = Math.floor(array.length/separator);
               var result = [];
@@ -13,7 +13,7 @@ angular.module("app")
               }
               return result;
             };
-
+            // The actual updater:
             var updateRecords = function(chunk, data, count, limit){
                 chunk = chunk.map(function(item){
                     return item.split(",");
@@ -21,6 +21,9 @@ angular.module("app")
                 angular.forEach(data, function(item,i){
                     var row = chunk[i];
                     if(angular.isArray(row) && row.length === 6) {
+                        // Make an $http POST call to write changes to actual DB:
+                        // ...
+                        // Sync local data on response:
                         item.name           = row[0] ? row[0] : item.name;
                         item.cName          = row[1] ? row[1] : item.cName;
                         item.price          = row[2] ? row[2] : item.price;
@@ -35,11 +38,11 @@ angular.module("app")
                     $scope.done = true;
                 }
             };
-
+            // Update initializer:
             var renderImage = function(file){
                 var reader = new FileReader();
                 reader.onload = function(event){
-                    // Get string from file:
+                    // Get text data from file:
                     var text = event.target.result;
                     // Match each line in the text:
                     var arrayFromText = text.match(/^.*(?:\s)$/gm);
@@ -47,7 +50,7 @@ angular.module("app")
                     // same for any futher updates. This means that it should 
                     // have information for updating all existing company records.
                     // Thus, set length of chunks equal to $scope.data.length plus 
-                    // one (timer data) and divide arrayFromText:
+                    // one (for timer) and divide arrayFromText:
                     var dividedArray = divide(arrayFromText, $scope.data.length+1);
                     var timer = 0;
                     var counter = 0;
@@ -58,7 +61,7 @@ angular.module("app")
                     });
                 };
             
-                // Read file and trigger load event:
+                // Read file and trigger FileReader's 'load' event:
                 reader.readAsText(file);
             }
 
